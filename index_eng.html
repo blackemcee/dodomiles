@@ -1,0 +1,1560 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Pilot trail running trip in the mountains of Albania and Montenegro: 4 running days (16–30 km) + 2 travel days. Accommodation, transfers, and luggage transport included. Self-paced running with safety protocols." />
+  <title>DodoMiles — Peaks of The Balkans</title>
+
+  <style>
+    :root{
+      --bg0:#fbfcf7;
+      --bg1:#f2f7f1;
+      --bg2:#eef6ff;
+      --ink:#142018;
+      --muted:#34463b;
+      --faint:#66766c;
+      --line: rgba(20,32,24,.12);
+      --card: rgba(255,255,255,.80);
+
+      --accent:#1f7a4a;
+      --accent2:#2a7bd6;
+      --accent3:#d68b2a;
+      --shadow: 0 12px 40px rgba(20,32,24,.10);
+      --radius: 18px;
+      --max: 1080px;
+
+      --step--1: clamp(.88rem, .84rem + .2vw, .97rem);
+      --step-0:  clamp(1rem, .95rem + .35vw, 1.12rem);
+      --step-1:  clamp(1.12rem, 1.02rem + .55vw, 1.38rem);
+      --step-2:  clamp(1.34rem, 1.14rem + 1.15vw, 1.86rem);
+      --step-3:  clamp(1.66rem, 1.28rem + 2.0vw, 2.55rem);
+      --step-4:  clamp(2.04rem, 1.45rem + 3.0vw, 3.25rem);
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      color:var(--ink);
+      font: 400 var(--step-0)/1.65 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      background: linear-gradient(
+        180deg,
+        var(--bg2) 0%,
+        var(--bg1) 45%,
+        var(--bg0) 100%
+      );
+    }
+
+    a{ color: inherit; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding: 18px 16px 78px; }
+
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251,252,247,.76);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding: 10px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .logo{
+      width: 100px;
+      object-fit: contain;
+      display:block;
+      padding: 6px;
+    }
+    .brand strong{
+      font-size: .92rem;
+      letter-spacing:.7px;
+      text-transform:uppercase;
+    }
+    .brand span{
+      display:block;
+      font-size: .80rem;
+      color: var(--faint);
+      margin-top:-2px;
+    }
+    .navlinks{
+      display:flex;
+      gap: 6px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .navlinks a{
+      text-decoration:none;
+      font-size: .92rem;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+    }
+    .navlinks a:hover{
+      border-color: var(--line);
+      background: rgba(255,255,255,.55);
+    }
+
+    .card{
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+    .section-inner{ padding: 18px; }
+    section{ margin-top: 16px; }
+
+    .hero{ padding-top: 18px; }
+    .hero-inner{
+      position:relative;
+      overflow:hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.72));
+    }
+    .hero-inner:before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      background:
+        radial-gradient(720px 420px at 12% 10%, rgba(31,122,74,.14), transparent 62%),
+        radial-gradient(760px 460px at 92% 8%, rgba(42,123,214,.14), transparent 60%),
+        radial-gradient(660px 420px at 60% 115%, rgba(214,139,42,.12), transparent 60%);
+      pointer-events:none;
+    }
+
+    .hero-media{
+      position: relative;
+      z-index: 1;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 16px 36px rgba(20,32,24,.10);
+      margin-top: 14px;
+    }
+    .hero-media img{
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display:block;
+      background: rgba(255,255,255,.72);
+    }
+    .hero-media figcaption{
+      padding: 10px 12px;
+      color: var(--faint);
+      font-size: .95rem;
+      border-top: 1px solid var(--line);
+      background: rgba(255,255,255,.76);
+    }
+    .hero-media .hint{ color: var(--muted); font-weight: 650; }
+    @media (min-width: 760px){
+      .hero-media img{ height: 360px; }
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .92rem;
+      position:relative;
+      z-index:1;
+    }
+    .leaf{
+      width:10px; height:10px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(31,122,74,.12);
+    }
+
+    h1{
+      margin: 14px 0 0;
+      font-size: var(--step-4);
+      line-height: 1.08;
+      letter-spacing: -0.6px;
+      position:relative;
+      z-index:1;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: var(--step-1);
+      max-width: 82ch;
+      position:relative;
+      z-index:1;
+    }
+    .subtitle{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: var(--step-0);
+      max-width: 82ch;
+    }
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 14px;
+      position:relative;
+      z-index:1;
+    }
+    .pill{
+      flex: 1 1 auto;
+      min-width: 170px;
+      border-radius: 16px;
+      padding: 12px 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.72);
+    }
+    .pill b{
+      display:block;
+      font-size: .84rem;
+      letter-spacing:.6px;
+      text-transform:uppercase;
+      color: var(--muted);
+    }
+    .pill span{
+      display:block;
+      margin-top: 2px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .section-title{
+      font-size: var(--step-2);
+      line-height: 1.2;
+      margin: 0 0 10px;
+      letter-spacing: -0.35px;
+    }
+    .section-lead{
+      margin: 0 0 14px;
+      color: var(--muted);
+      max-width: 88ch;
+    }
+    .fineprint{ color: var(--faint); font-size: .95rem; margin: 0; }
+
+    .callout{
+      padding: 12px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(31,122,74,.18);
+      background: rgba(31,122,74,.06);
+      color: var(--muted);
+    }
+    .callout b{ color: var(--ink); }
+
+    .two{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .bullets{
+      margin: 0;
+      padding: 0;
+      list-style:none;
+      display:grid;
+      gap: 10px;
+    }
+    .bullets li{
+      display:flex;
+      gap: 10px;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.62);
+    }
+    .bullets .icon{
+      width: 28px;
+      height: 28px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.80);
+      flex: 0 0 auto;
+      display:grid;
+      place-items:center;
+      color: var(--accent);
+      font-weight: 900;
+      font-size: 0.95rem;
+      margin-top: 1px;
+    }
+    .bullets p{ margin:0; }
+    .bullets p small{ display:block; margin-top: 3px; color: var(--faint); font-size: .95rem; }
+
+    /* Route */
+    .days{ display:grid; gap: 10px; }
+    details.day{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.62);
+      border-radius: 18px;
+      padding: 12px 12px;
+      overflow:hidden;
+    }
+    details.day + details.day{ margin-top: 10px; }
+    details.day summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight: 850;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 14px;
+    }
+    details.day summary::-webkit-details-marker{ display:none; }
+    .daytitle{ display:flex; flex-direction:column; gap: 4px; min-width: 0; }
+    .daytitle .topline{ display:flex; gap: 10px; flex-wrap:wrap; align-items:baseline; }
+    .badge{
+      font-size: .82rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.78);
+      color: var(--muted);
+      font-weight: 750;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+    .badge.green{ border-color: rgba(31,122,74,.22); background: rgba(31,122,74,.06); color: var(--accent); }
+    .badge.blue{ border-color: rgba(42,123,214,.22); background: rgba(42,123,214,.06); color: var(--accent2); }
+    .badge.orange{ border-color: rgba(214,139,42,.28); background: rgba(214,139,42,.08); color: #8a550a; }
+    .daymeta{ color: var(--muted); font-weight: 650; line-height: 1.35; }
+    .daymeta small{ display:block; margin-top: 2px; color: var(--faint); font-weight: 500; }
+    details.day summary:after{
+      content:"+";
+      width: 28px; height: 28px;
+      border-radius: 10px;
+      display:grid;
+      place-items:center;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.78);
+      color: var(--muted);
+      flex: 0 0 auto;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+    details.day[open] summary:after{ content:"–"; }
+    .daybody{ margin-top: 12px; color: var(--muted); }
+    .daygrid{ display:grid; grid-template-columns: 1fr; gap: 12px; margin-top: 10px; }
+    .daybox{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.70);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .daybox h4{ margin: 0 0 8px; font-size: 1.02rem; letter-spacing: -.2px; color: var(--ink); }
+    .kv{ display:grid; gap: 6px; margin: 0; padding: 0; list-style:none; }
+    .kv li{
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      border-bottom: 1px dashed rgba(20,32,24,.12);
+      padding-bottom: 6px;
+    }
+    .kv li:last-child{ border-bottom: none; padding-bottom: 0; }
+    .kv b{ color: var(--muted); font-size: .92rem; font-weight: 750; }
+    .kv span{ color: var(--ink); font-weight: 700; text-align:right; }
+    .imgph{
+      width:100%;
+      height: 240px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.70);
+      object-fit: cover;
+      display:block;
+    }
+
+    /* FAQ */
+    details.faq{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.62);
+      border-radius: 16px;
+      padding: 12px 12px;
+    }
+    details.faq + details.faq{ margin-top: 10px; }
+    details.faq summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight: 800;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    details.faq summary::-webkit-details-marker{ display:none; }
+    details.faq summary:after{
+      content:"+";
+      width: 28px; height: 28px;
+      border-radius: 10px;
+      display:grid;
+      place-items:center;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.78);
+      color: var(--muted);
+      flex: 0 0 auto;
+      font-weight: 900;
+    }
+    details.faq[open] summary:after{ content:"–"; }
+    details.faq p{ margin: 10px 0 0; color: var(--muted); }
+
+    /* Join */
+    .join{
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.72));
+      position:relative;
+      overflow:hidden;
+    }
+    .join:before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      background:
+        radial-gradient(720px 420px at 18% 20%, rgba(31,122,74,.12), transparent 62%),
+        radial-gradient(700px 420px at 88% 15%, rgba(42,123,214,.10), transparent 60%);
+      pointer-events:none;
+    }
+    .join .section-inner{ position:relative; z-index:1; }
+
+    .contact{ display:grid; gap: 10px; margin-top: 8px; }
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      padding: 13px 14px;
+      border-radius: 16px;
+      text-decoration:none;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.78);
+      color: var(--ink);
+      font-weight: 800;
+      cursor:pointer;
+      user-select:none;
+      transition: transform .12s ease, background .12s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.92); }
+    .btn .tag{
+      font-size: .85rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.70);
+      color: var(--muted);
+      font-weight: 800;
+    }
+    .btn.primary{
+      border-color: rgba(31,122,74,.25);
+      background: linear-gradient(135deg, rgba(31,122,74,.12), rgba(255,255,255,.78));
+    }
+    .btn.blue{
+      border-color: rgba(42,123,214,.22);
+      background: linear-gradient(135deg, rgba(42,123,214,.10), rgba(255,255,255,.78));
+    }
+
+    /* Logistics */
+    .loggrid{ display:grid; grid-template-columns: 1fr; gap: 12px; }
+    .logitem{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.62);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .logitem h3{ margin:0 0 8px; font-size: 1.04rem; letter-spacing: -.2px; }
+    .logitem p{ margin: 0; color: var(--muted); }
+    .logitem ul{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+    .logitem li{ margin: 6px 0; }
+
+    /* About */
+    .profile{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      align-items:start;
+    }
+    .avatar{
+      width: 150px;
+      height: 150px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 35% 30%, rgba(42,123,214,.18), transparent 62%),
+        radial-gradient(circle at 65% 55%, rgba(31,122,74,.16), transparent 62%),
+        rgba(255,255,255,.82);
+      overflow:hidden;
+      object-fit: cover;
+      display:block;
+    }
+    .profile p{ margin:0; color: var(--muted); }
+    .profile p strong{ color: var(--ink); }
+    .profile p + p{ margin-top: 10px; }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .chip{
+      font-size: .86rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.72);
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    footer{
+      margin-top: 24px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+    }
+    .footer-center{
+      text-align: center;
+    }
+
+    .footer-brand{
+      display: block;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .footer-copy{
+      margin-top: 6px;
+      font-size: .9rem;
+      color: var(--faint);
+    }
+
+    /* ===== Visual upgrade pack (no markup changes) ===== */
+
+    /* More vibrant palette */
+    :root{
+      --bg0:#fcfdf8;
+      --bg1:#f0fbf4;
+      --bg2:#eef6ff;
+
+      --accent:#16a34a;   /* greener */
+      --accent2:#2563eb;  /* bluer */
+      --accent3:#f59e0b;  /* warmer */
+      --accent4:#ec4899;  /* punch */
+      --shadow: 0 18px 60px rgba(20,32,24,.12);
+    }
+
+    /* Animated ambient background (subtle) */
+    body{
+      position: relative;
+    }
+    body::before{
+      content:"";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events:none;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(238,246,255,.60) 0%,
+          rgba(240,247,241,.70) 45%,
+          rgba(251,252,247,.80) 100%
+        ),
+        url("pics/ai.png");
+
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      filter: saturate(1.05) contrast(1.05);
+    }
+
+    body::after{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events:none;
+      z-index:-1;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.30));
+      mix-blend-mode: soft-light;
+    }
+    /* Crisp, “glassier” cards */
+    .card{
+      background: rgba(255,255,255,.72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-color: rgba(20,32,24,.10);
+    }
+    .card:hover{
+      box-shadow: 0 22px 70px rgba(20,32,24,.14);
+    }
+
+    /* Header + nav: a bit more premium */
+    header{
+      background: rgba(255,255,255,.35);
+      border-bottom-color: rgba(20,32,24,.10);
+    }
+    .navlinks a{
+      position: relative;
+    }
+    .navlinks a:after{
+      content:"";
+      position:absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 5px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(22,163,74,.0), rgba(22,163,74,.55), rgba(37,99,235,.55), rgba(245,158,11,.0));
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform .18s ease;
+      opacity:.9;
+    }
+    .navlinks a:hover:after{ transform: scaleX(1); }
+
+    /* Hero: slightly more contrast + depth */
+    .hero-inner{
+      background: linear-gradient(180deg, rgba(255,255,255,.90), rgba(255,255,255,.64));
+    }
+    .hero-media{
+      border-color: rgba(20,32,24,.10);
+    }
+    .hero-media img{
+      transform: scale(1.02);
+      transition: transform .35s ease;
+    }
+    .hero-media:hover img{
+      transform: scale(1.06);
+    }
+
+    /* Kicker chip: gradient edge */
+    .kicker{
+      background: rgba(255,255,255,.68);
+      box-shadow: 0 10px 24px rgba(20,32,24,.08);
+    }
+    .leaf{
+      background: radial-gradient(circle at 30% 30%, #34d399, #16a34a);
+      box-shadow: 0 0 0 6px rgba(22,163,74,.12);
+    }
+
+    /* Title rhythm: closer + more punch */
+    h1{
+      text-shadow: 0 1px 0 rgba(255,255,255,.55);
+    }
+    .subtitle{
+      opacity: .95;
+    }
+
+    /* Pills: hover lift + subtle gradient */
+    .pill{
+      position: relative;
+      overflow: hidden;
+      border-color: rgba(20,32,24,.10);
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    .pill:before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      background: radial-gradient(420px 120px at 15% 0%, rgba(22,163,74,.10), transparent 60%),
+                radial-gradient(420px 120px at 85% 0%, rgba(37,99,235,.10), transparent 60%);
+      pointer-events:none;
+    }
+    .pill:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(20,32,24,.10);
+    }
+
+    /* Bullets: clearer hierarchy */
+    .bullets li{
+      border-color: rgba(20,32,24,.10);
+      box-shadow: 0 10px 22px rgba(20,32,24,.06);
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    .bullets li:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(20,32,24,.10);
+    }
+    .bullets .icon{
+      border-color: rgba(20,32,24,.10);
+      background: rgba(255,255,255,.88);
+    }
+
+    /* Details: more interactive feel */
+    details.day, details.faq{
+      border-color: rgba(20,32,24,.10);
+      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+    }
+    details.day:hover, details.faq:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(20,32,24,.10);
+    }
+    details.day[open], details.faq[open]{
+      border-color: rgba(22,163,74,.22);
+      box-shadow: 0 18px 44px rgba(22,163,74,.10);
+    }
+    details.day summary:after, details.faq summary:after{
+      background: rgba(255,255,255,.86);
+      border-color: rgba(20,32,24,.10);
+    }
+
+    /* Buttons: brighter gradients + subtle glow */
+    .btn{
+      border-color: rgba(20,32,24,.10);
+      box-shadow: 0 12px 26px rgba(20,32,24,.08);
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(22,163,74,.18), rgba(255,255,255,.84));
+    }
+    .btn.blue{
+      background: linear-gradient(135deg, rgba(37,99,235,.16), rgba(255,255,255,.84));
+    }
+    .btn:hover{
+      box-shadow: 0 18px 44px rgba(20,32,24,.12);
+    }
+
+    /* Callouts: more contrast */
+    .callout{
+      border-color: rgba(22,163,74,.22);
+      background: linear-gradient(180deg, rgba(22,163,74,.10), rgba(22,163,74,.06));
+    }
+
+    /* Avatars: add subtle shadow and hover */
+    .avatar{
+      box-shadow: 0 14px 28px rgba(20,32,24,.10);
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    .avatar:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 44px rgba(20,32,24,.14);
+    }
+
+    /* Respect reduced-motion */
+    @media (min-width: 760px){
+      .wrap{ padding: 22px 18px 86px; }
+      .two{ grid-template-columns: 1fr 1fr; }
+      .daygrid{ grid-template-columns: 1fr 1fr; }
+      .loggrid{ grid-template-columns: 1fr 1fr; }
+      .profile{ grid-template-columns: 150px 1fr; }
+      footer .footgrid{ grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Home">
+        <img class="logo" src="pics/logo.svg" alt="DodoMiles" />
+      </a>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#about">About</a>
+        <a href="#what">Format</a>
+        <a href="#route">Route</a>
+        <a href="#logistics">Logistics</a>
+        <a href="#trust">Payment</a>
+        <a href="#faq">FAQ</a>
+        <a href="#join">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <!-- OVERVIEW -->
+    <section id="overview" class="hero">
+      <div class="card hero-inner">
+        <div class="section-inner">
+          <div class="kicker">
+            <span class="leaf" aria-hidden="true"></span>
+            <span><b>Pilot Edition</b> · 7 people · 4 running days · Albania → Montenegro</span>
+          </div>
+
+          <h1>Running Across the Balkan Alps</h1>
+
+          <p class="subtitle">
+            A trip for trail runners into a world of rocky peaks and Balkan folklore,
+            on the border of Albania and Montenegro
+          </p>
+
+          <p class="sub">
+            We’ll run on the “Peaks of the Balkans” trail — a remote and wild long-distance trekking route
+            in the Balkan Alps at the junction of three countries: Albania, Montenegro, and Kosovo.
+          </p>
+          <p class="sub">
+            The full route stretches for 194 km with summits up to 2400 m, but we’ll shorten it to a “modest”
+            85 km across Albania and Montenegro. We run light; expect snowy passes, clouds sitting on ridge tops,
+            villages hidden deep in the mountains, flocks of sheep on the slopes, cozy guesthouses for the nights,
+            local food, and stories about the traditions and customs of these places.
+          </p>
+
+          <figure class="hero-media" aria-label="Hero photo">
+            <img src="pics/header_sun.jpg" alt="Mountains of Albania and Montenegro" />
+          </figure>
+
+          <div class="pillrow" aria-label="Quick facts">
+            <div class="pill">
+              <b>Dates</b>
+              <span>19 → 24 July 2026 (6 days)</span>
+            </div>
+            <div class="pill">
+              <b>Start / Finish</b>
+              <span>Tirana (transfers to the mountains)</span>
+            </div>
+            <div class="pill">
+              <b>Running days</b>
+              <span>4 full days (mountain trails)</span>
+            </div>
+            <div class="pill">
+              <b>Group</b>
+              <span>7 people (including the organizer)</span>
+            </div>
+            <div class="pill">
+              <b>Price</b>
+              <span>€1050</span>
+            </div>
+          </div>
+
+          <div class="callout" style="margin-top:14px;">
+            <b>Why “pilot”?</b> This is the first run of this exact format and route combination.
+            The trip is designed as a pilot and non-commercial —
+            the price is calculated at cost, with no profit built in.
+            It’s a chance to be part of the first edition
+            and, together, figure out what future trips should look like.
+            <span style="display:block; margin-top:6px;">
+              I run the entire route with the group:
+              on this trip I’m both the organizer and a participant,
+              not a separate “tour leader.”
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <div class="section-inner">
+        <h2 class="section-title">About the project</h2>
+
+        <div class="profile">
+          <div>
+            <img class="avatar" src="pics/me.jpg" alt="Organizer photo" />
+          </div>
+
+          <div>
+            <p>
+              <strong>I'm Yury Kirillov.</strong>
+              I live in Amsterdam and have been running for about 13 years — from road to trail —
+              and over that time I’ve completed many marathons and ultramarathons,
+              primarily in the mountains.
+            </p>
+            <p>
+              In my professional life I spent most of my time in IT.
+              In recent years I’ve also been organizing educational and research trips around the world
+              with like-minded people: we explored ancient monuments in Jordan, visited remote tribes in the jungles
+              of Nagaland and the Colombian Amazon, and took part in archaeological excavations in Uzbekistan.
+              But all that time I really wanted to combine two of my true passions: travel and running.
+              That’s why I’m launching a new project — <strong>DodoMiles</strong>.
+            </p>
+            <p>
+              DodoMiles is about active travel to hard-to-reach corners of nature: running, hiking,
+              and multi-day routes. All logistics are arranged in advance — accommodation, transfers,
+              luggage transport, and support. At the same time, everyone runs at their own comfortable pace,
+              with pre-agreed safety rules.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IT IS -->
+    <section id="what" class="card">
+      <div class="section-inner">
+        <h2 class="section-title">Trip format</h2>
+        <p class="section-lead">
+          The trip is fully organized — accommodation, logistics, and support
+          are planned in advance.
+          Running is <b>self-paced</b>,
+          but within a <b>clear safety system</b>.
+        </p>
+
+        <div class="two">
+          <ul class="bullets" aria-label="What’s arranged">
+            <li>
+              <div class="icon" aria-hidden="true">✓</div>
+              <p>
+                <b>Accommodation.</b>
+                <small>Hotels and guesthouses for every night.</small>
+              </p>
+            </li>
+            <li>
+              <div class="icon" aria-hidden="true">✓</div>
+              <p>
+                <b>Transfers.</b>
+                <small>Transfer from Tirana to the start and back from the finish, plus local rides during the trip.</small>
+              </p>
+            </li>
+            <li>
+              <div class="icon" aria-hidden="true">✓</div>
+              <p>
+                <b>Luggage transport.</b>
+                <small>We run light; luggage is moved between overnight stops by vehicle.</small>
+              </p>
+            </li>
+          </ul>
+
+          <ul class="bullets" aria-label="How running works">
+            <li>
+              <div class="icon" aria-hidden="true" style="color: var(--accent2);">⟂</div>
+              <p>
+                <b>No on-trail escort.</b>
+                <small>This is not a guided run: everyone runs at their own pace.</small>
+              </p>
+            </li>
+            <li>
+              <div class="icon" aria-hidden="true" style="color: var(--accent2);">✓</div>
+              <p>
+                <b>Mini-groups.</b>
+                <small>When possible, we split into small pace groups — it helps with flow and safety.</small>
+              </p>
+            </li>
+            <li>
+              <div class="icon" aria-hidden="true" style="color: var(--accent2);">✓</div>
+              <p>
+                <b>Daily briefing & debrief.</b>
+                <small>Morning: route, weather, risks. Evening: the day’s story, good food, and well-earned rest.</small>
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="callout" style="margin-top:14px;">
+          <b>Safety, in short:</b>
+          nobody is left “on their own.”
+          Everyone either shares live location or uses GPX tracks and check-ins,
+          we define checkpoints in advance,
+          and we avoid risky calls in bad weather or questionable conditions.
+        </div>
+      </div>
+    </section>
+
+    <!-- ROUTE -->
+    <section id="route" class="card">
+      <div class="section-inner">
+        <h2 class="section-title">Route</h2>
+
+        <div class="days" aria-label="Itinerary days">
+          <details class="day" open>
+            <summary>
+              <div class="daytitle">
+                <div class="topline">
+                  <span class="badge green">Day 0</span>
+                  <span class="badge orange">Travel</span>
+                  <span class="badge">Albania</span>
+                </div>
+                <div class="daymeta">
+                  Participants arrive
+                  <small>check-in · free time</small>
+                </div>
+              </div>
+            </summary>
+            <div class="daybody">
+              <div class="daygrid">
+                <div class="daybox">
+                  <p>
+                    Arrival in Tirana, check-in at a hotel in the city of Durrës. Free time.
+                  </p>
+                </div>
+                <div class="daybox">
+                  <img class="imgph" src="pics/tirana.jpg" alt="Tirana" />
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="day">
+            <summary>
+              <div class="daytitle">
+                <div class="topline">
+                  <span class="badge green">Day 1</span>
+                  <span class="badge orange">Transfer to the mountains</span>
+                  <span class="badge">Albania</span>
+                </div>
+                <div class="daymeta">
+                  Tirana → Theth
+                  <small>transfer · hike · briefing</small>
+                </div>
+              </div>
+            </summary>
+            <div class="daybody">
+              <div class="daygrid">
+                <div class="daybox">
+                  <p>
+                    After breakfast at the hotel we head north toward the Balkan Alps.
+                    A winding mountain road brings us to the village of Theth — the home base for mountain lovers in Albania.
+                    This is where the Peaks of the Balkans route officially begins.
+                    Theth sits in a high valley surrounded by 2,000-meter peaks —
+                    with a stone church, wooden cabins, flocks of sheep, and wisps of cloud clinging to the ridges.
+                  </p>
+                  <p>
+                    We’ll explore the area, loosen up the legs, swim, listen to stories, and enjoy a great dinner —
+                    tomorrow the adventure starts.
+                  </p>
+                </div>
+                <div class="daybox">
+                  <img class="imgph" src="pics/day1.jpg" alt="Theth" />
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="day">
+            <summary>
+              <div class="daytitle">
+                <div class="topline">
+                  <span class="badge green">Day 2</span>
+                  <span class="badge blue">Run</span>
+                  <span class="badge">Albania</span>
+                </div>
+                <div class="daymeta">
+                  Theth → Valbona
+                  <small>15km · +1100m · -800m</small>
+                </div>
+              </div>
+            </summary>
+            <div class="daybody">
+              <div class="daygrid">
+                <div class="daybox">
+                  <p>
+                    Our first running day. After breakfast we pack our running vests and start from Theth.
+                    We climb to the Valbona Pass at around 1800 meters — wide views open over the valley and surrounding ridgelines.
+                    We’ll snack near the pass, then begin the descent toward Valbona.
+                  </p>
+                  <p>
+                    Valbona Valley National Park is considered one of the most beautiful places in Albania
+                    and lies in the heart of the Accursed Mountains.
+                    In the evening we reach the village of Valbona and stay in one of the local guesthouses scattered across the valley.
+                  </p>
+                </div>
+                <div class="daybox">
+                  <img class="imgph" src="pics/day2.jpg" alt="Theth — Valbona, running stage over the pass" />
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="day">
+            <summary>
+              <div class="daytitle">
+                <div class="topline">
+                  <span class="badge green">Day 3</span>
+                  <span class="badge blue">Run</span>
+                  <span class="badge">Albania</span>
+                </div>
+                <div class="daymeta">
+                  Valbona → Çerem → Dobërdol
+                  <small>29km · +2200m · -1300m</small>
+                </div>
+              </div>
+            </summary>
+            <div class="daybody">
+              <div class="daygrid">
+                <div class="daybox">
+                  <p>
+                    A long and very full day. After breakfast we leave Valbona and climb on an alpine trail to the Perslopit Pass (2039 m)
+                    on the border with Montenegro. We gain over 1000 m and find ourselves among the highest rocky peaks,
+                    including Maja Jezercë — the “queen of the Albanian Alps” (2694 m).
+                  </p>
+                  <p>
+                    After a short section in Montenegro, we return to Albania and descend on a shepherd’s trail to the secluded village of Çerem.
+                    In Çerem we rest, have lunch, and start the second part of the day.
+                    This section is easier — mostly forest and fields — but there’s still another kilometer of ascent, so don’t underestimate it.
+                  </p>
+                  <p>
+                    By late afternoon we reach the shepherd settlement of Dobërdol.
+                    There are no roads here, and our luggage will arrive by horses.
+                    Dinner and rest.
+                  </p>
+                </div>
+                <div class="daybox">
+                  <img class="imgph" src="pics/day3.jpg" alt="Valbona → Çerem → Dobërdol" />
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="day">
+            <summary>
+              <div class="daytitle">
+                <div class="topline">
+                  <span class="badge green">Day 4</span>
+                  <span class="badge blue">Run</span>
+                  <span class="badge">Montenegro</span>
+                </div>
+                <div class="daymeta">
+                  Dobërdol → Babino Polje → Vusanje
+                  <small>20km · +1000m · -1600m</small>
+                </div>
+              </div>
+            </summary>
+            <div class="daybody">
+              <div class="daygrid">
+                <div class="daybox">
+                  <p>
+                    Breakfast in Dobërdol, then we run toward the border with Montenegro.
+                    We start high today, so the first part doesn’t have a huge climb.
+                    Soon the blueberry fields around Dobërdol give way to jagged peaks forming the massif at the border of three countries.
+                    If time and energy allow, we can take an optional spur to a nearby summit.
+                  </p>
+                  <p>
+                    Once we’re in Montenegro, we begin a gentle descent to the village of Babino Polje.
+                    At the end of the trail we’ll find a cozy guesthouse with a terrace for a snack,
+                    then we hop into the bus for about a 1.5-hour drive to the next point — the Grbaje Valley,
+                    often (without false modesty) called one of the most scenic valleys in Europe.
+                    From here a beautiful mountain trail runs beneath the Talijanka and Popadija peaks,
+                    with views toward the sharp Karanfili ridge.
+                    At the end of the trail our bus meets us and takes us to the village of Vusanje,
+                    where we’ll have dinner and spend the night.
+                  </p>
+                </div>
+                <div class="daybox">
+                  <img class="imgph" src="pics/day4.jpg" alt="Dobërdol → Babino Polje → Vusanje" />
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="day">
+            <summary>
+              <div class="daytitle">
+                <div class="topline">
+                  <span class="badge green">Day 5</span>
+                  <span class="badge blue">Run</span>
+                  <span class="badge">Montenegro</span>
+                </div>
+                <div class="daymeta">
+                  Vusanje → Theth
+                  <small>20km · +900m · -1100m</small>
+                </div>
+              </div>
+            </summary>
+            <div class="daybody">
+              <div class="daygrid">
+                <div class="daybox">
+                  <p>
+                    The final running day — and the official end of the Peaks of the Balkans route.
+                    The Vusanje → Theth stage is considered one of the most beautiful sections of the entire trail:
+                    20 kilometers of alpine meadows, lakes, waterfalls, and sharp peaks as we cross from Montenegro back into Albania.
+                  </p>
+                  <p>
+                    We return to where it all began — the village of Theth —
+                    celebrate the finish with great food, share impressions,
+                    and enjoy a well-deserved rest for the remainder of the day.
+                  </p>
+                </div>
+                <div class="daybox">
+                  <img class="imgph" src="pics/day5.jpg" alt="Vusanje → Theth" />
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="day">
+            <summary>
+              <div class="daytitle">
+                <div class="topline">
+                  <span class="badge green">Day 6</span>
+                  <span class="badge orange">Return</span>
+                  <span class="badge">Albania</span>
+                </div>
+                <div class="daymeta">
+                  Theth → Tirana
+                  <small>transfer · flight home</small>
+                </div>
+              </div>
+            </summary>
+            <div class="daybody">
+              <p>
+                Breakfast, goodbye to the mountains, then we take the bus back to Tirana. The adventure ends.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCAL -->
+    <section id="local" class="card">
+      <div class="section-inner">
+        <h2 class="section-title">Local expert</h2>
+
+        <div class="profile">
+          <div>
+            <img class="avatar" src="pics/mendi.jpg" alt="Expert photo" />
+          </div>
+
+          <div>
+            <p>
+              <strong>Mendi Zavalani</strong> has been deeply connected to mountains and nature since childhood — his father took him hiking in the Morava hills of southern Albania from an early age. Mendi trained as an architect and holds a degree in urban planning, but mountain travel has always remained his true passion. Through his travel company, he actively promotes routes in Albania’s national parks.
+              His deep knowledge of the region allows travelers to truly understand, experience, and appreciate the freedom and raw beauty of the Albanian Alps, far from well-trodden paths. Mendi is a licensed mountain guide. On this trip, he supports route planning, organizes transfers and accommodation, helps resolve complex situations, leads briefings, and meets the group at the end of each day on the trail.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGISTICS -->
+    <section id="logistics" class="card">
+      <div class="section-inner">
+        <h2 class="section-title">Logistics</h2>
+
+        <div class="loggrid" aria-label="Logistics blocks">
+          <div class="logitem">
+            <h3>Accommodation</h3>
+            <p>All overnight stays are arranged as part of the trip.</p>
+            <ul>
+              <li>Night 0: <b>Amfiteatri Hotel Durres</b> — Durres</li>
+              <li>Night 1: <b>Polia Guesthouse</b> — Theth</li>
+              <li>Night 2: <b>Margjeka Hotel</b> — Valbona</li>
+              <li>Night 3: <b>Leonard Guesthouse / Bashkimi Guesthouse</b> — Doberdol</li>
+              <li>Night 4: <b>Vucetaj Guesthouse</b> — Vusanje</li>
+              <li>Night 5: <b>Polia Guesthouse</b> — Theth</li>
+            </ul>
+          </div>
+
+          <div class="logitem">
+            <h3>Transfers</h3>
+            <p>Transfers from Tirana to the start and back, plus all local rides, are arranged.</p>
+            <ul>
+              <li>Day 1: Tirana → Theth (group transfer)</li>
+              <li>Day 6: Theth → Tirana (group transfer)</li>
+              <li>Short transfers along the way to reduce running on roads</li>
+            </ul>
+          </div>
+
+          <div class="logitem">
+            <h3>Luggage transport</h3>
+            <p>Luggage is moved between overnight stops so you can run with a small pack or vest.</p>
+            <ul>
+              <li>Luggage type: backpacks or duffels; suitcases won’t work because part of the route uses horses.</li>
+              <li>On you: phone, water, snacks, spare layer</li>
+            </ul>
+          </div>
+
+          <div class="logitem">
+            <h3>Communication & coordination</h3>
+            <p>We keep communication simple and clear.</p>
+            <ul>
+              <li>Group chat: WhatsApp/Telegram</li>
+              <li>Daily briefing: route, weather, key risks, check-in points</li>
+              <li>Daily debrief: how the day went, timing, plan for the next day</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top:14px;">
+          <b>Important:</b> there is no guide accompanying you on the trail.
+          Trip organization is logistics and overall safety protocols, not continuous on-route support.
+          If you’re unsure whether this format fits you, message me with your experience —
+          we’ll talk it through and decide.
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST / PAYMENTS -->
+    <section id="trust" class="card">
+      <div class="section-inner">
+        <h2 class="section-title">Payment & participation terms</h2>
+        <p class="section-lead">Participation fee: <b>€1050</b></p>
+
+        <div class="two">
+          <div class="callout">
+            <b>Step-by-step</b>
+            <ul style="margin:10px 0 0; padding-left:18px;">
+              <li>First we talk and confirm the format is right for you.</li>
+              <li>Your spot is secured with a <b>30% deposit</b> of the total trip cost.</li>
+              <li><b>The remaining amount</b> is paid after final confirmation, no later than 2 months before the start date.</li>
+            </ul>
+          </div>
+
+          <div class="callout">
+            <b>Payment methods</b>
+            <ul style="margin:10px 0 0; padding-left:18px;">
+              <li>Bank transfer (SEPA).</li>
+              <li>Payment via a payment platform (on request).</li>
+            </ul>
+            <p class="fineprint" style="margin-top:8px;">
+              If paying via a payment platform, the service fee is covered by the participant.
+              Bank details are shared privately after participation is confirmed.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top:14px;">
+          <b>Cancellation & refunds</b>
+          <ul style="margin:10px 0 0; padding-left:18px;">
+            <li><b>Until 18.04.2026:</b> full refund of the entire amount.</li>
+            <li><b>After 18.04.2026:</b> refund minus actual non-refundable expenses
+                (accommodation, transfers), or a full refund if a replacement participant is found.</li>
+            <li><b>If the trip is canceled due to not reaching the minimum number of participants:</b>
+                full refund of all paid funds.</li>
+            <li><b>If the organizer cancels the trip:</b>
+                full refund of all funds.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="card">
+      <div class="section-inner">
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-lead">
+          This is a physically demanding trip.
+          Below are clear, practical answers about required fitness,
+          logistics, and participation conditions.
+        </p>
+
+        <details class="faq">
+          <summary>What level of fitness is required?</summary>
+          <p>
+            This trip is designed for well-prepared runners.
+            It includes <b>four consecutive running days</b> in the mountains,
+            with daily distances of approximately <b>16–30 km</b>
+            and significant elevation gain.
+          </p>
+          <p>
+            To participate, you should:
+          </p>
+          <ul>
+            <li>run regularly at least 3–4 times per week;</li>
+            <li>have experience with long trail runs or mountain races of 25–30 km or more;</li>
+            <li>be comfortable with several hard days in a row without full recovery;</li>
+            <li>be able to navigate using GPX tracks on a watch or smartphone.</li>
+          </ul>
+        </details>
+
+        <details class="faq">
+          <summary>How is accommodation arranged?</summary>
+          <p>
+            Accommodation is included and based on shared twin rooms.
+            You will normally share a room with another participant.
+          </p>
+          <p>
+            Single-room accommodation may be available for an additional fee.
+            However, it is <b>not always possible</b>:
+            mountain guesthouses are often very simple,
+            and single rooms do not exist everywhere.
+          </p>
+          <p>
+            Single-room availability is confirmed individually,
+            once the final route and overnight locations are fixed.
+          </p>
+        </details>
+
+        <details class="faq">
+          <summary>What if I can’t run part of a stage or need to skip a day?</summary>
+          <p>
+            The format accounts for this possibility.
+            If you experience excessive fatigue,
+            discomfort, or a minor injury,
+            you may shorten a stage or skip it entirely.
+          </p>
+          <p>
+            Depending on the situation, options may include:
+          </p>
+          <ul>
+            <li>skipping part of a stage using the luggage transfer vehicle;</li>
+            <li>skipping a full day and moving directly to the next overnight location;</li>
+            <li>traveling together with the local support guide outside the running route.</li>
+          </ul>
+          <p>
+            Decisions are made on-site,
+            based on the participant’s condition,
+            logistical constraints,
+            and overall safety considerations.
+          </p>
+        </details>
+
+        <details class="faq">
+          <summary>At what altitudes does the route run?</summary>
+          <p>
+            The route takes place at altitudes between approximately
+            <b>850 and 2400 meters</b> above sea level.
+          </p>
+          <p>
+            If you know you are sensitive to altitude
+            or have medical conditions related to high elevation,
+            you should consult a doctor in advance.
+          </p>
+          <p>
+            Each participant is responsible for assessing
+            their own health and limits.
+          </p>
+        </details>
+
+        <details class="faq">
+          <summary>Can the route change?</summary>
+          <p>
+            Yes. The route may be adjusted on any day of the trip.
+          </p>
+          <p>
+            Possible reasons include:
+          </p>
+          <ul>
+            <li>unfavorable weather conditions;</li>
+            <li>overall fatigue or condition of the group;</li>
+            <li>trail conditions (snow, washouts, landslides);</li>
+            <li>other factors affecting safety.</li>
+          </ul>
+          <p>
+            Route changes are decided by the organizing side,
+            with safety as the primary priority.
+          </p>
+        </details>
+
+        <details class="faq">
+          <summary>What is included in the price?</summary>
+          <p>
+            The price includes:
+          </p>
+          <ul>
+            <li>accommodation for the entire route;</li>
+            <li>meals from Day 1 to Day 6, except dinner on Day 2 in Valbona;</li>
+            <li>all transfers, including luggage transport;</li>
+            <li>organizational and logistical support;</li>
+            <li>route materials and safety protocols.</li>
+          </ul>
+          <p>
+            Not included:
+            flights to and from Tirana,
+            personal travel insurance,
+            meals outside organized stops,
+            alcohol,
+            personal equipment.
+          </p>
+        </details>
+
+        <details class="faq">
+          <summary>Is insurance required?</summary>
+          <p>
+            Yes. Participation requires personal travel and medical insurance
+            that explicitly covers trail running and mountain activities.
+          </p>
+        </details>
+
+        <details class="faq">
+          <summary>What equipment is required?</summary>
+          <p>
+            A full and final equipment list will be sent closer to the trip dates.
+            It may change depending on weather forecasts
+            and current mountain conditions.
+          </p>
+
+          <p>
+            Core requirements include:
+          </p>
+          <ul>
+            <li>a running vest or backpack with water capacity of at least 1 liter;</li>
+            <li>both light and warm running layers;</li>
+            <li>trail running shoes;</li>
+            <li>trail poles (preferably running-specific);</li>
+            <li>a waterproof jacket with taped seams;</li>
+            <li>emergency thermal blanket;</li>
+            <li>elastic bandage, sports tape, blister plasters;</li>
+            <li>sunscreen;</li>
+            <li>a waterproof headlamp;</li>
+            <li>GPX tracks for each day loaded on your phone or watch.</li>
+          </ul>
+
+          <p>
+            Due to altitude changes and variable mountain weather,
+            conditions can shift significantly within a single day.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- HOW TO JOIN -->
+    <section id="join" class="card join">
+      <div class="section-inner">
+        <h2 class="section-title">How to join</h2>
+        <p class="section-lead">
+          This is a pilot format with a group of 7 people.
+          If you’re interested, send me a message and we’ll confirm together
+          whether the format is right for you.
+        </p>
+
+        <div class="two">
+          <div class="callout">
+            <b>Information to include</b><br/>
+            <ul style="margin:10px 0 0; padding-left:18px;">
+              <li>your name and city/country of origin;</li>
+              <li>a short summary of your running background, especially trail experience;</li>
+              <li>approximate weekly training volume;</li>
+              <li>any constraints or considerations (injuries, health, diet, etc.).</li>
+            </ul>
+          </div>
+
+          <div class="callout">
+            <b>Contact</b><br/>
+            Choose the most convenient option:
+            <div class="contact">
+              <a class="btn primary" href="mailto:run@dodomiles.com?subject=Pilot%20Run%20Trip%20(Albania%20%2B%20Montenegro)">
+                Email
+              </a>
+              <a class="btn blue" href="https://wa.me/31612234441" aria-label="WhatsApp link">
+                WhatsApp
+              </a>
+              <a class="btn blue" href="https://t.me/blackemcee" aria-label="Telegram link">
+                Telegram
+              </a>
+            </div>
+            <p class="fineprint" style="margin-top:10px;">
+              Payment is discussed after fit confirmation.
+              Bank transfer or payment via a payment service is available.
+            </p>
+          </div>
+        </div>
+
+        <p class="fineprint" style="margin-top:12px;">
+          Note: as this is a pilot trip, some details may adjust
+          based on weather and group condition —
+          all changes are communicated clearly and in advance.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-center">
+        <strong class="footer-brand">DODOMILES</strong>
+        <div class="footer-copy">
+          © <span id="year"></span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
