@@ -757,6 +757,27 @@
       .profile{ grid-template-columns: 150px 1fr; }
       footer .footgrid{ grid-template-columns: 1fr 1fr; }
     }
+    /* Mobile header cleanup */
+    @media (max-width: 759px){
+      .nav{
+        padding: 6px 14px;
+      }
+
+      .navlinks{
+        display: none;
+      }
+
+      header{
+        background: rgba(251,252,247,.85);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+
+      .logo{
+        width: 78px;
+        padding: 4px;
+      }
+    }
   </style>
 </head>
 
