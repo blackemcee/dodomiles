@@ -1,7 +1,4 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
+// learn more about the schema: https://pris.ly/d/prisma-schema
 
 generator client {
   provider = "prisma-client"
@@ -10,4 +7,75 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+}
+
+enum TripStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+model Trip {
+  id              String     @id @default(cuid())
+  slug            String     @unique
+  title           String
+  tagline         String
+  status          TripStatus @default(DRAFT)
+
+  startDate       DateTime
+  endDate         DateTime
+
+  countries       String[]
+  region          String
+  startCity       String
+  endCity         String
+
+  priceCents      Int
+  depositCents    Int?
+  currency        String     @default("EUR")
+  maxParticipants Int        @default(8)
+
+  heroImageUrl    String
+  summary         String
+  description     String
+
+  hostName        String
+  hostBio         String
+  hostImageUrl    String
+
+  inclusions      String[]
+
+  days            TripDay[]
+  faqItems        FaqItem[]
+
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model TripDay {
+  id             String  @id @default(cuid())
+  tripId         String
+  trip           Trip    @relation(fields: [tripId], references: [id], onDelete: Cascade)
+
+  dayNumber      Int
+  title          String
+  description    String
+  distanceKm     Float?
+  elevationGainM Int?
+  elevationLossM Int?
+  imageUrl       String?
+
+  @@unique([tripId, dayNumber])
+}
+
+model FaqItem {
+  id       String @id @default(cuid())
+  tripId   String
+  trip     Trip   @relation(fields: [tripId], references: [id], onDelete: Cascade)
+
+  question String
+  answer   String
+  order    Int
+
+  @@unique([tripId, order])
 }
