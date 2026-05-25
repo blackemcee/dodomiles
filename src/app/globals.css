@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --bg0: #fbfcf7;
+  --bg1: #f2f7f1;
+  --bg2: #eef6ff;
+  --ink: #142018;
+  --muted: #34463b;
+  --faint: #66766c;
+  --line: rgba(20, 32, 24, 0.12);
+  --card: rgba(255, 255, 255, 0.8);
+
+  --accent: #1f7a4a;
+  --accent2: #2a7bd6;
+  --accent3: #d68b2a;
+
+  --shadow: 0 12px 40px rgba(20, 32, 24, 0.1);
+  --radius: 18px;
+  --max: 1080px;
+
+  --step--1: clamp(0.88rem, 0.84rem + 0.2vw, 0.97rem);
+  --step-0: clamp(1rem, 0.95rem + 0.35vw, 1.12rem);
+  --step-1: clamp(1.12rem, 1.02rem + 0.55vw, 1.38rem);
+  --step-2: clamp(1.34rem, 1.14rem + 1.15vw, 1.86rem);
+  --step-3: clamp(1.66rem, 1.28rem + 2vw, 2.55rem);
+  --step-4: clamp(2.04rem, 1.45rem + 3vw, 3.25rem);
+}
+
+@theme inline {
+  --color-bg0: var(--bg0);
+  --color-bg1: var(--bg1);
+  --color-bg2: var(--bg2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent2);
+  --color-accent3: var(--accent3);
+  --shadow-brand: var(--shadow);
+  --radius-brand: var(--radius);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font: 400 var(--step-0) / 1.65 ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: linear-gradient(
+    180deg,
+    var(--bg2) 0%,
+    var(--bg1) 45%,
+    var(--bg0) 100%
+  );
+}
+
+a {
+  color: inherit;
+}
