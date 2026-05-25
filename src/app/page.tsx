@@ -14,7 +14,14 @@ import {
 export const revalidate = 60;
 
 export default async function HomePage() {
-  const trips = await getPublishedTrips();
+  // Tolerate DB being unreachable at build time (Railway's build sandbox
+  // can't resolve postgres.railway.internal). ISR re-fetches at runtime.
+  let trips: TripWithRelations[] = [];
+  try {
+    trips = await getPublishedTrips();
+  } catch (err) {
+    console.error("HomePage: failed to load trips", err);
+  }
 
   return (
     <>

@@ -18,8 +18,16 @@ import {
 export const revalidate = 60;
 
 export async function generateStaticParams() {
-  const trips = await getPublishedTrips();
-  return trips.map((t) => ({ slug: t.slug }));
+  // Tolerate DB being unreachable at build time. With an empty list returned,
+  // Next renders pages on demand at runtime (dynamicParams=true is default),
+  // and ISR caches them per `revalidate`.
+  try {
+    const trips = await getPublishedTrips();
+    return trips.map((t) => ({ slug: t.slug }));
+  } catch (err) {
+    console.error("generateStaticParams: failed to load trips", err);
+    return [];
+  }
 }
 
 export async function generateMetadata({
