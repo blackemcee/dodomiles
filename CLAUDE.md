@@ -40,10 +40,10 @@ Do **not** merge `next` into `main` until DNS is ready to flip, since that would
 ## Roadmap (phases)
 
 1. ~~Scaffold Next.js + Tailwind + legacy archive.~~ ✅
-2. Prisma + Postgres (Docker for local dev).
-3. Trip schema + seed Peaks of the Balkans from `legacy/index.html`.
-4. Public pages: `/` gallery + `/trips/[slug]` detail.
-5. Railway project + first deploy.
+2. ~~Prisma + Postgres (Docker for local dev).~~ ✅
+3. ~~Trip schema + seed Peaks of the Balkans from `legacy/index.html`.~~ ✅
+4. ~~Public pages: `/` gallery + `/trips/[slug]` detail.~~ ✅
+5. Railway project + first deploy. ⏳ — `railway.json` + `start:prod` script committed; awaiting Railway project setup in their UI.
 6. NextAuth + user accounts (`/account`).
 7. Booking model + Stripe Checkout flow.
 8. Admin panel (`/admin` — role-gated CRUD + image upload).
@@ -54,8 +54,17 @@ Do **not** merge `next` into `main` until DNS is ready to flip, since that would
 
 - `npm run dev` — Turbopack dev server.
 - `npm run build && npm start` — production smoke test.
+- `npm run start:prod` — what Railway runs (`prisma migrate deploy && next start`); use locally too if testing a release-like flow.
 - `npm run lint` — flat ESLint config (`eslint.config.mjs`).
+- `npm run db:up` / `db:down` / `db:reset` / `db:studio` / `db:seed` — Postgres + Prisma helpers.
+- `npm run screenshot` — Playwright captures into `screenshots/` (gitignored). Requires the dev server running on `:3737`; override with `SCREENSHOT_BASE=http://...`.
 - Node: fnm (`.nvmrc` honored via `eval "$(fnm env --use-on-cd)"`).
+
+## Deploying
+
+Railway, via `railway.json`. Build = Nixpacks (auto), start = `npm run start:prod`. See README for the first-deploy walkthrough.
+
+The seed is intentionally **not** part of the deploy chain — `prisma migrate deploy` runs migrations but never the seed (so a redeploy can't silently overwrite real data). Run `npm run db:seed` manually via `railway run` once per fresh database.
 
 ## Contact details (carried over)
 
