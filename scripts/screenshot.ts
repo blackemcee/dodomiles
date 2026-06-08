@@ -39,6 +39,8 @@ const shots: (Shot & { sections?: Section[] })[] = [
     height: 844,
     fullPage: true,
   },
+  { name: "login-desktop", url: "/login", width: 1280, height: 900, fullPage: true },
+  { name: "login-mobile", url: "/login", width: 390, height: 844, fullPage: true },
 ];
 
 async function main() {
